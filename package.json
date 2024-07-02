@@ -1,5 +1,5 @@
 {
-  "name": "component_library",
+  "name": "@SDE-Arvind/react-components",
   "version": "1.0.0",
   "description": "A simple template for a custom React component library",
   "main": "dist/cjs/index.js",
@@ -12,6 +12,9 @@
   "type": "module",
   "author": "Arvind Kumar",
   "license": "ISC",
+  "dependencies": {
+    "storyboard": "^3.3.2"
+  },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.0",
     "@rollup/plugin-commonjs": "^26.0.1",
@@ -40,7 +43,7 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
-  "dependencies": {
-    "storyboard": "^3.3.2"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/SDE-Arvind"
   }
 }
