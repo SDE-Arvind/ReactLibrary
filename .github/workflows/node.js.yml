@@ -27,9 +27,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Configure npm registry
-      run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+      run: echo "//npm.pkg.github.com/:_authToken=${{ ComponentLibrary.GITHUB_TOKEN }}" > ~/.npmrc
       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ ComponentLibrary.GITHUB_TOKEN }}
     - run: npm ci
     - run: npm install
     - run: npm run build --if-present
